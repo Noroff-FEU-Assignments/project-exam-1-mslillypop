@@ -21,10 +21,10 @@
                 return response.json();
             })
             .then(data => {
-                let displayedPosts = 0; // Counter for displayed posts
+                let displayedPosts = 0; 
     
                 data.forEach(post => {
-                    if (displayedPosts < 4) { // Limit to display only 4 posts
+                    if (displayedPosts < 4) { 
                         const postId = post.id;
                         const postTitle = post.title.rendered;
                         const featuredImageId = post.featured_media;
@@ -39,9 +39,8 @@
                                     return response.json();
                                 })
                                 .then(imageData => {
-                                    const featuredImageSrc = imageData.source_url; // Replace with the correct property for image URL
+                                    const featuredImageSrc = imageData.source_url; 
     
-                                    // Create carousel item elements
                                     const postSlide = document.createElement("div");
                                     postSlide.classList.add("carousel-slide");
     
@@ -61,7 +60,7 @@
     
                                     carousel.appendChild(postSlide);
     
-                                    displayedPosts++; // Increment the counter for displayed posts
+                                    displayedPosts++; 
                                 })
                                 .catch(error => {
                                     console.error('Error fetching featured image data:', error);

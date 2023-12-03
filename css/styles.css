@@ -146,7 +146,7 @@ nav li:hover {
   display: none;
 }
 
-.letsexplore {
+.jiggly {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -282,7 +282,7 @@ textarea {
 }
 
 [type="submit"]:hover {
-  background: #145999;
+  background: #e72e2e;
 }
 
 .sent {
